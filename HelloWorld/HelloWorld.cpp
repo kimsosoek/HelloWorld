@@ -65,35 +65,84 @@
 
 int main() // 엔트리 포인트(코드가 시작되는 곳)
 {
-	printf("HelloWorld"); //c언어의 출력 방법
-	printf("김소석\n");// "" 안에 뺵슬래시가 있으면 줄을 바꾸라는 의미(이스케이프 시퀀스)
-	printf("95년생");
-	printf("▩▒㈜");
+	//printf("\n");
 
-	//	std::cout << "HelloWoreld"; // c++ 출력방법
-	// number 라는 이름을 가진 int변수를 선언하고 거기에 0을 대입한다.
 
-	int number; //변수선언
-	number = 0; //변수에 값을 대입
 
-	// int : 정수형(소수점이 없는 숫자, 5,10,-2,0,66...)
-	number = 5.3; // number 에는 5가 저장된다. 소수점 날림
-	number = 5 / 2; // number에는 2가 저장된다. 위와 동일
 
-	scanf_s("%d", &number); //숫자를 하나 입력받기(C)
-	printf("입력한 숫자는(C) : %d\n", number);
+	////	std::cout << "HelloWoreld"; // c++ 출력방법
+	//// number 라는 이름을 가진 int변수를 선언하고 거기에 0을 대입한다.
 
-	std::cin >> number;   //숫자를 하나 입력 받기
-	printf("입력한 숫자는(C++) : %d\n", number);
+	//int number; //변수선언
+	//number = 0; //변수에 값을 대입
 
-	int number1 = 0;
-	int number2 = 0;
-	printf("숫자 1을 입력하시오 : ");
-	std::cin >> number1;
-	printf("숫자 2를 입력하시오 : ");
-	std::cin >> number2;
-	int number3 = number1 + number2;
-	printf("두 숫자의 합은 %d입니다.", number3);
+	//// int : 정수형(소수점이 없는 숫자, 5,10,-2,0,66...)
+	//number = 5.3; // number 에는 5가 저장된다. 소수점 날림
+	//number = 5 / 2; // number에는 2가 저장된다. 위와 동일
+
+	//int number1 = 0;
+	//std::cin >> number;   //숫자를 하나 입력 받기
+	//printf("무엇 : %d\n", number);
+
+	//int number2 = 0;
+	//std::cin >> number;   //숫자를 하나 입력 받기
+	//printf("무엇 : %d\n", number);
+
+
+	//printf("숫자 1을 입력하시오 : ");
+	//std::cin >> number1;
+	//printf("숫자 2를 입력하시오 : ");
+	//std::cin >> number2;
+	//int number3 = number1 + number2;
+	//printf("두 숫자의 합은 %d입니다.", number3);
+
+	//int a = 0;
+	//std::cin >> a;   //숫자를 하나 입력 받기
+
+	//int b = 0;
+	//std::cin >> b;   //숫자를 하나 입력 받기
+
+	//int c = a;
+	//
+	//a = b;
+	//b = c;
+
+	/*printf("%d,%d", a, b);*/
+
+
+
+	//int a = 0;
+	//std::cin >> a;   //숫자를 하나 입력 받기
+
+	//int b = 0;
+	//std::cin >> b;   //숫자를 하나 입력 받기
+
+	//printf("%d", a * b);
+
+	//int a = 153;
+	//std::cin >> a;   //숫자를 하나 입력 받기
+
+	//int b = 15;
+	//std::cin >> b;   //숫자를 하나 입력 받기
+
+	//int devide=a/b, mod; // devide = 10
+	//mod = a - b * devide;
+
+	//printf("%d", mod);
+
+	int time;
+	std::cin >> time;   //숫자를 하나 입력 받기
+
+	int hour, min, sec;
+
+	hour = time / 3600;
+	time -= hour * 3600; // time = time - hour
+	min = time / 60;
+	time -= min  * 60;
+	sec = time;
+
+
+	printf("%d,%d,%d", hour,min,sec);
 
 	return 0;
 }
