@@ -32,8 +32,8 @@
 // \r 캐리지 리턴(윈도우에는 의미없음 리눅스에서 중요)
 // 추가추가추가ㅇㅇ
 #include <iostream> // 입출력 관련(cout)
-#include<cstdio>
-#include"header.h"
+#include <cstdio>
+//#include "header.h"
 
 
 int main() // 엔트리 포인트(코드가 시작되는 곳)
@@ -46,13 +46,15 @@ int main() // 엔트리 포인트(코드가 시작되는 곳)
 	//	std::cout << "HelloWoreld"; // c++ 출력방법
 
 	int number = 0;
-	scanf("%d", &number); //숫자를 하나 입력받기(C)
+	scanf_s("%d", &number); //숫자를 하나 입력받기(C)
 	printf("입력한 숫자는(C) : %d\n, number");
 
 	std::cin >> number;   //숫자를 하나 입력 받기
 	printf("입력한 숫자는(C++) : %d\n", number);
 	return 0;
 }
+//fdsfdsdsds
+//dnjdnjndsj
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
 // 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
