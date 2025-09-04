@@ -1,4 +1,8 @@
-﻿// LEI_WULONG.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
+﻿#pragma region 단축키
+
+
+
+// LEI_WULONG.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 // 소스파일
 // 주석(Comment):컴파일러가 무시하는 문장
 // (프로그램에서 실행이 되지 않는 영향을 미치지 않는 부분)
@@ -27,11 +31,12 @@
 // 리빌드: 전체 다시 빌드하기 (정리+빌드)
 // 헤더는 순서를 신경써서 정리해야함.
 // 변수 이름은 직관적인 것으로 영어로 첫글자는 대문자!!
+#pragma endregion
+
 
 /* 컴파일러: 번역기(사람이 써놓은 코드를 기계가 알아듣게 번역해줌) 컴파일러는 종류별로 따로 있음 표준기능은 다 있음. >목적코드 생성*/
 
-
-// 이스케이프 시퀀스
+#pragma region 이스케이프 시퀀스
 
 // \n 줄바꾸기
 // \t 탭넣기
@@ -39,8 +44,13 @@
 // \\ \ 찍기
 // \r 캐리지 리턴(윈도우에는 의미없음 리눅스에서 중요)
 // 변수(variabl)
+#pragma endregion
 
-/*연산자(operator)
+#pragma region 연산자(operator),제어문,반복문
+
+
+
+/*
 - 계산을 하기위한 기호
 - 대입 연산자
   = 오른쪽에 있는 값을 왼쪽에 넣어라
@@ -60,6 +70,8 @@
 - 증감 연산자
 
 		*/
+
+
 
 /*이진수(binary)
  - 컴퓨터는 0과1만 알수 있기 때문에 기본적으로 이진수를 사용
@@ -158,6 +170,8 @@ ex) 13 = 2^3 *1 + 2^2 * 1 + 2^1 * 0 + 2^0 * 1 =1101
 
 	 */
 
+
+
 /* 반복문
 * - 제어문 중의 하나
 * - 특정코드 블록을 조건에 따라 여러번 반복해서 실행할 수 있게 해주는 문
@@ -167,18 +181,13 @@ ex) 13 = 2^3 *1 + 2^2 * 1 + 2^1 * 0 + 2^0 * 1 =1101
 */
 
 // == 양변이 같다.
-
+#pragma endregion
 
 #include <iostream> // 입출력 관련(cout)
 #include <cstdio>
-//#include "header.h"
 
+#pragma region 실습1
 
-int main() // 엔트리 포인트(코드가 시작되는 곳)
-{
-	//printf("\n");
-
-	
 
 
 	///std::cout << "HelloWoreld"; // c++ 출력방법
@@ -371,7 +380,7 @@ int main() // 엔트리 포인트(코드가 시작되는 곳)
 	//	c = a + b * 2;
 	//}
 	//c = (a > b) ?(a*2+b) : (a+b*2); //삼항연산자
-
+#pragma endregion
 
 
 
@@ -380,108 +389,108 @@ int main() // 엔트리 포인트(코드가 시작되는 곳)
 
 
 int main(){ // 엔트리 포인트(코드가 시작되는 곳)
-	int a = 0; //변수는 사용하기 전에 선언한다.
-	printf("숫자를 입력하세여."); // 1번
-	std::cin >> a;
-	if (a > 0)
-	{
-		printf("양수입니다\n");
-	}
-	else if (a<0)
-	{
-		printf("음수입니다\n");
-	}
-	else
-	{
-		printf("0입니다\n");
-	}
+	//int a = 0; //변수는 사용하기 전에 선언한다.
+	//printf("숫자를 입력하세여."); // 1번
+	//std::cin >> a;
+	//if (a > 0)
+	//{
+	//	printf("양수입니다\n");
+	//}
+	//else if (a<0)
+	//{
+	//	printf("음수입니다\n");
+	//}
+	//else
+	//{
+	//	printf("0입니다\n");
+	//}
 
-	int b = 0;
-	printf("홀짝을 알고 싶으면 숫자를 입력하세여."); // 2번
-	std::cin >> b;
-	if (b % 2 == 0)
-	{
-		printf("짝수입니다.\n");
-	}
-	else 
-	{
-		printf("홀수입니다.\n");
-	}
+	//int b = 0;
+	//printf("홀짝을 알고 싶으면 숫자를 입력하세여."); // 2번
+	//std::cin >> b;
+	//if (b % 2 == 0)
+	//{
+	//	printf("짝수입니다.\n");
+	//}
+	//else 
+	//{
+	//	printf("홀수입니다.\n");
+	//}
 
-	printf("숫자를 입력하세요."); // 3번
-	std::cin >> a;
-	std::cin >> b;
-	
-	if (a > b)
-	{
-		printf("a가 더 큽니다.\n");
-	}
+	//printf("숫자를 입력하세요."); // 3번
+	//std::cin >> a;
+	//std::cin >> b;
+	//
+	//if (a > b)
+	//{
+	//	printf("a가 더 큽니다.\n");
+	//}
 
-	else if (a < b)
-	{
-		printf("b가 더 큽니다.\n");
-	}
+	//else if (a < b)
+	//{
+	//	printf("b가 더 큽니다.\n");
+	//}
 
-	else
-	{
-		printf("a 와 b는 같습니다.\n");
-	}
+	//else
+	//{
+	//	printf("a 와 b는 같습니다.\n");
+	//}
 
-    const unsigned int Limitage = 5;      // 올바른 선언
-	const float Limitheight = 120.0f;
-	unsigned int age = 0; //unsigned int: 양수만  저장한다.
-	float height = 0; //암시적 변환(대충 변환해주는 것, 보통 표현 범위가 큰쪽으로 변경됨)
-	printf("키와 나이를 입력하세여.\n"); // 4번
-	std::cin >> age;
-	std::cin >> height;
+ //   const unsigned int Limitage = 5;      // 올바른 선언
+	//const float Limitheight = 120.0f;
+	//unsigned int age = 0; //unsigned int: 양수만  저장한다.
+	//float height = 0; //암시적 변환(대충 변환해주는 것, 보통 표현 범위가 큰쪽으로 변경됨)
+	//printf("키와 나이를 입력하세여.\n"); // 4번
+	//std::cin >> age;
+	//std::cin >> height;
 
-	if (Limitage >= 120 && Limitheight >= 6)
-	{
-		printf(" 타세요.\n");
-	}
-	else
-	{
-		printf("타지마세요.\n");
-	}
+	//if (Limitage >= 120 && Limitheight >= 6)
+	//{
+	//	printf(" 타세요.\n");
+	//}
+	//else
+	//{
+	//	printf("타지마세요.\n");
+	//}
 
-	printf("점수를 입력하세요.\n"); // 5번
-	std::cin >> a;
-	if (a>=90)
-	{
-		printf("A");
-	}
-	else if (a>=80)
-	{
-		printf("B");
-	}
-	else if (a >= 70)
-	{
-		printf("C");
-	}
-	else if (a >= 60)
-	{
-		printf("D");
-	}
-	else
-	{
-		printf("F");
-	}
+	//printf("점수를 입력하세요.\n"); // 5번
+	//std::cin >> a;
+	//if (a>=90)
+	//{
+	//	printf("A");
+	//}
+	//else if (a>=80)
+	//{
+	//	printf("B");
+	//}
+	//else if (a >= 70)
+	//{
+	//	printf("C");
+	//}
+	//else if (a >= 60)
+	//{
+	//	printf("D");
+	//}
+	//else
+	//{
+	//	printf("F");
+	//}
 
-	int c = 0;
+	//int c = 0;
 
-	printf("점수를 3개 입력하세요.\n"); // 6번
-	std::cin >> a;
-	std::cin >> b;
-	std::cin >> c;
+	//printf("점수를 3개 입력하세요.\n"); // 6번
+	//std::cin >> a;
+	//std::cin >> b;
+	//std::cin >> c;
 
-	if (((a + b + c) / 3.0f >= 60) && (a >= 40 && b >= 40 && c >= 40)) //괄호는 구분하기 편하게
-	{
-		printf("합격.");
-	}
-	else
-	{
-		printf("불합격");
-	}
+	//if (((a + b + c) / 3.0f >= 60) && (a >= 40 && b >= 40 && c >= 40)) //괄호는 구분하기 편하게
+	//{
+	//	printf("합격.");
+	//}
+	//else
+	//{
+	//	printf("불합격");
+	//}
 		//int flag = 0b1010;  
 	//// 0b0001 = 왼쪽 키가 눌러졌다.
 	//// 0b0010 = 오른쪽 키가 눌러졌다.
@@ -530,7 +539,7 @@ int main(){ // 엔트리 포인트(코드가 시작되는 곳)
 	//printf("테스트할 수 입력")
 	//	if ((number & 0b0001) != 0)// 0b0001 이나 1이나 같다)
 	//	{
-	//		ㅔ갸ㅜㅅㄹ("홀수를 입력했습니다..\n)")';
+	//		printf("홀수를 입력했습니다..\n)")';
 	//	}
 	//	else
 	//	{
@@ -550,6 +559,7 @@ int main(){ // 엔트리 포인트(코드가 시작되는 곳)
 	//	printf("helloworld while: %d\n", count);
 	//	count++;
 	//}
+
 
 	//int count = 0;
 	//do
@@ -572,15 +582,14 @@ int main(){ // 엔트리 포인트(코드가 시작되는 곳)
 			//***
 		 //  *****
 
-	int number = 0
-		std::cin >> number;
-	printf("숫자를 입력하시오")
-		int count = 0;
-		while (count % 3) != 0) // whilw()의 조건이 참이면 코드 블럭 실행
-{
-	printf("helloworld while: %d\n", count);
-	count++;
-}
+//	int number = 0
+//		std::cin >> number;
+//	printf("숫자를 입력하시오")
+//		int count = 0;
+//		while (count % 3) != 0) // whilw()의 조건이 참이면 코드 블럭 실행
+//	printf("helloworld while: %d\n", count);
+//	count++;
+//}
 
 	return 0;
 }
